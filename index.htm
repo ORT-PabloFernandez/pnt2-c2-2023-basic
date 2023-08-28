@@ -10,10 +10,12 @@
         // DOM Document Object Model del HTML
         let user = document.getElementById(id);
         //user.children
-        let contador = user.children[0].children[0].children[1].children[1];
-        contador.innerText = parseInt(contador.innerText) + 1;
 
         // TODO 1: usar querySelector en lugar de children
+        //let contador = user.children[0].children[0].children[1].children[1];
+        let contador = user.querySelector(".user-item__info h3");
+        console.log(contador);
+        contador.innerText = parseInt(contador.innerText) + 1;
         // TODO 2: quiero generar el componente usuario (li) de manera
         // automatica con javascript
         // TODO 3: Repasar HTML y CSS del tutorial: https://developer.mozilla.org/es/docs/Learn/HTML
@@ -61,6 +63,19 @@
             <a href="#">
               <div class="user-item__image avatar">
                 <img src="/img/Nestor Wilke.jpg" alt="Nestor Wilke" />
+              </div>
+              <div class="user-item__info">
+                <h2>Nestor Wilke</h2>
+                <h3>0</h3>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="user-item" id="4" onclick="handlerClick_Card(4)">
+          <div class="card user-item__content">
+            <a href="#">
+              <div class="user-item__image avatar">
+                <img src="/img/Lynne Robbins.jpg" alt="Lynne Robbins" />
               </div>
               <div class="user-item__info">
                 <h2>Nestor Wilke</h2>
