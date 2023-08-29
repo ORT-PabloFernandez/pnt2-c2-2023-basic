@@ -3,9 +3,13 @@ import { users } from "../data/users.js";
 document.addEventListener("DOMContentLoaded", () => Load());
 
 function Load(){
-    users.forEach(user => CreateUser(user));
+    const queryString = window.location.search;
+    const params = new URLSearchParams(queryString);
+    const user = users.find(user => user["Object Id"] == params.get("userId"));
+    CreateUser(user);
 }
 
+// TODO: UserDetails o crear componente con detalle del usuario
 function CreateUser(user){
     const main = document.getElementById('main');
 
@@ -45,11 +49,3 @@ function CreateUser(user){
     twitter.innerHTML = user.twitter;
     userItemInfo.appendChild(twitter);
 }
-
-// TODO: ver el tema del Module
-// TODO: ver el tema de utilizar archivos js desde otro js
-
-// TODO 1: Arreglar para que muestre las imagenes correctamente.
-// TODO 2: Crear la pagina de detalle de usuario, donde muestre 
-//         todos los datos. (foto y datos)
-
