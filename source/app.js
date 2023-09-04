@@ -38,11 +38,11 @@ function CreateUser(user){
     link.appendChild(userItemInfo);
 
     const nombreUser = document.createElement("h2");
-    nombreUser.innerHTML = user.name;
+    nombreUser.innerHTML = user["Display name"];
     userItemInfo.appendChild(nombreUser);
 
     const twitter = document.createElement("h3");
-    twitter.innerHTML = user.twitter;
+    twitter.innerHTML = user.Title;
     userItemInfo.appendChild(twitter);
 }
 
