@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <script app.js></script>
     <script>
       function handlerClick_Card(id) {
         // DOM Document Object Model del HTML
         let user = document.getElementById(id);
         //user.children
-        let contador = user.children[0].children[0].children[1].children[1];
-        contador.innerText = parseInt(contador.innerText) + 1;
+        // let contador = user.children[0].children[0].children[1].children[1];
+        // contador.innerText = parseInt(contador.innerText) + 1;
 
         // TODO 1: usar querySelector en lugar de children
-        // TODO 2: quiero generar el componente usuario (li) de manera
-        // automatica con javascript
-        // TODO 3: Repasar HTML y CSS del tutorial: https://developer.mozilla.org/es/docs/Learn/HTML
+        let contador = user.querySelector("h3");
+        contador.innerText = parseInt(contador.innerText) + 1;
       }
+
+      // TODO 2: quiero generar el componente usuario (li) de manera automatica con javascript
+      // TODO 3: Repasar HTML y CSS del tutorial: https://developer.mozilla.org/es/docs/Learn/HTML
     </script>
   </head>
   <body>
